@@ -8,12 +8,15 @@ Personal collection of agent skills for AI coding assistants, distributed via `n
 
 ## Repository Structure
 
+The repo root contains a `skills/` **subdirectory** (not the repo root itself) where all skills live:
+
 ```
-skills/
-  {skill-name}/
-    SKILL.md              # Skill index: metadata + overview + reference list
-    references/
-      {category}-{topic}.md   # One concept per file
+<repo root>/
+  skills/                        # ← subdirectory; create skills here, NOT at repo root
+    {skill-name}/
+      SKILL.md                   # Skill index: metadata + overview + reference list
+      references/
+        {category}-{topic}.md    # One concept per file
 ```
 
 A skill only needs to conform to the skill file spec below — no additional configuration, manifest, or tooling files are required.
