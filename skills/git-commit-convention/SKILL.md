@@ -13,6 +13,7 @@ Conventional Commits 1.0.0 — a specification for writing commit messages that 
 - Scope narrows the affected area: `feat(auth):`, `fix(api):`
 - Breaking changes use `!` suffix or `BREAKING CHANGE:` footer (or both)
 - Footer tokens follow Git trailer convention
+- Default to English, but match the project's existing convention — check `git log` and follow whatever language recent commits use
 
 ```
 <type>[optional scope]<!>: <description>
