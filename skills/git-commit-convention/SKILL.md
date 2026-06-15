@@ -3,7 +3,7 @@ name: git-commit-convention
 description: Reference for writing structured git commit messages. Use when asked to write a commit, generate a commit message, review commit style, or work with conventional commits format.
 metadata:
   author: edram
-  version: 2026.06.05
+  version: 2026.06.15
   source: https://www.conventionalcommits.org/en/v1.0.0/
 ---
 
@@ -35,3 +35,4 @@ Conventional Commits 1.0.0 — a specification for writing commit messages that 
 |-------|-------------|-----------|
 | Breaking Changes | `!` syntax and `BREAKING CHANGE` footer — when and how | [features-breaking](references/features-breaking.md) |
 | Footers | Token format rules, issue references, common tokens | [features-footers](references/features-footers.md) |
+| AI-Generated Changes | `Co-Authored-By` attribution for agent-authored commits — and what not to add | [features-ai-attribution](references/features-ai-attribution.md) |
