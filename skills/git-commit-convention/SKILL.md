@@ -36,4 +36,4 @@ Conventional Commits 1.0.0 — a specification for writing commit messages that 
 |-------|-------------|-----------|
 | Breaking Changes | `!` syntax and `BREAKING CHANGE` footer — when and how | [features-breaking](references/features-breaking.md) |
 | Footers | Token format rules, issue references, common tokens | [features-footers](references/features-footers.md) |
-| AI-Generated Changes | `Co-Authored-By` attribution for agent-authored commits — and what not to add | [features-ai-attribution](references/features-ai-attribution.md) |
+| AI-Generated Changes | `Co-Authored-By` attribution for agent-authored commits — mandatory once it applies, fixed value format, and what not to add | [features-ai-attribution](references/features-ai-attribution.md) |
