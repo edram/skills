@@ -12,7 +12,10 @@ npx skills@latest add edram/skills
 
 ## Skills
 
-> Skills 正在持续添加中，敬请期待。
+| Skill | 说明 |
+|-------|------|
+| [git-commit-convention](./skills/git-commit-convention/) | 编写结构化、符合 conventional commits 规范的 git 提交信息。 |
+| [skill-writer](./skills/skill-writer/) | 按本仓库格式创建和修订 agent skill。 |
 
 ## 许可证
 

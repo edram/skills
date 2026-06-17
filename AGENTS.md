@@ -1,88 +1,51 @@
 # AGENTS.md
 
-This file provides guidance to AI agents working with code in this repository.
-
-## Repository Purpose
-
-Personal collection of agent skills for AI coding assistants, distributed via `npx skills@latest add edram/skills`. Skills are standalone Markdown files that help AI agents understand tools, frameworks, and coding conventions — focused on practical patterns rather than user-facing documentation.
-
 ## Repository Structure
 
-The repo root contains a `skills/` **subdirectory** (not the repo root itself) where all skills live:
+A personal collection of agent skills. Each skill is a self-contained, pure-markdown
+document set — no manifest, config, or tooling files are required.
 
 ```
-<repo root>/
-  skills/                        # ← subdirectory; create skills here, NOT at repo root
-    {skill-name}/
-      SKILL.md                   # Skill index: metadata + overview + reference list
-      references/
-        {category}-{topic}.md    # One concept per file
+.
+├── AGENTS.md                     # This file — house rules for agents
+├── CLAUDE.md                     # → symlink to AGENTS.md
+├── README.md / README.zh-CN.md   # Human-facing index
+│
+├── skills/                       # Canonical source — ALL skills live here
+│   └── {skill-name}/
+│       ├── SKILL.md              # Index: metadata + overview + reference table
+│       └── references/
+│           └── *.md              # One concept per file
+│
+├── .claude/skills/               # Harness discovery dir — symlinks into ../../skills/
+│   └── {skill-name} → ../../skills/{skill-name}
+├── .agents/skills/               # Same, for the .agents harness
+│   └── {skill-name} → ../../skills/{skill-name}
+│
+└── plans/                        # Scratch planning docs (not shipped as skills)
 ```
 
-A skill only needs to conform to the skill file spec below — no additional configuration, manifest, or tooling files are required.
+## Creating / Updating Skills
 
-## Skill File Format
+- **ALWAYS use the `skill-writer` skill.** It is the source of truth for this repo's
+  format, frontmatter, structure, and writing guidelines — don't hand-roll a skill or
+  duplicate those rules elsewhere.
+- **`skills/` is canonical.** `.claude/skills/` and `.agents/skills/` are convenience
+  mirrors of it via symlink, not separate skills. Do **not** author per-skill alias or
+  symlink "skills."
+- **List only canonical skills** in public inventories (e.g. the `README.md` Skills
+  table) — exclude the mirror symlinks.
 
-### `SKILL.md` (index)
+### Registration checklist
 
-```markdown
----
-name: {skill-name}
-description: {one-line description used for discovery — when to invoke this skill}
-metadata:
-  author: edram
-  version: YYYY.MM.DD
-  source: {optional URL if derived from external docs}
----
+When adding a new skill `<skill-name>`:
 
-Brief overview paragraph.
-
-Key concepts or features as a bullet list.
-
-> Version note if applicable.
-
-## Core
-
-| Topic | Description | Reference |
-|-------|-------------|-----------|
-| Topic Name | Short description | [core-topic](references/core-topic.md) |
-
-## Features
-
-| Topic | Description | Reference |
-|-------|-------------|-----------|
-| Topic Name | Short description | [features-topic](references/features-topic.md) |
-```
-
-### `references/*.md` (individual concepts)
-
-```markdown
----
-name: {concept-name}
-description: {one-line summary}
----
-
-## Usage
-
-{Practical code examples — the primary content}
-
-## Key Points
-
-- Concise bullets on non-obvious behavior
-- Edge cases, gotchas, defaults
-
-<!--
-Source references:
-- {source-url}
--->
-```
-
-## Writing Guidelines
-
-- **Focus on agent capabilities and practical usage patterns.** Ignore user-facing guides, introductions, get-started, and install guides.
-- **Ignore what LLMs already know.** Skip content an agent is already confident about from training data.
-- **Rewrite for agents, not copy.** Synthesize docs for LLM consumption — restructure around what an agent needs to *do*.
-- **Be concise.** Remove fluff; keep essential information. Avoid creating too many reference files.
-- **One concept per file.** Name files `{category}-{topic}.md` (e.g., `core-config.md`, `features-mocking.md`).
-- **Always include code.** Provide working examples; explain *when and why*, not just *how*.
-
+1. Create `skills/<skill-name>/SKILL.md` (+ any `references/*.md`).
+2. Mirror it into both harness discovery dirs so each can find it (run from repo root):
+   ```bash
+   ln -s ../../skills/<skill-name> .claude/skills/<skill-name>
+   ln -s ../../skills/<skill-name> .agents/skills/<skill-name>
+   ```
+   The target is **relative** (`../../skills/...`) so the links resolve on any clone;
+   commit the symlinks themselves, not copies of the files.
+3. Add the skill to the `README.md` Skills section — canonical name only, alphabetical.

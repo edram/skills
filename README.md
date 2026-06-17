@@ -12,7 +12,10 @@ npx skills@latest add edram/skills
 
 ## Skills
 
-> Skills are being added gradually. Stay tuned.
+| Skill | Description |
+|-------|-------------|
+| [git-commit-convention](./skills/git-commit-convention/) | Writing structured, conventional git commit messages. |
+| [skill-writer](./skills/skill-writer/) | Authoring and revising agent skills in this repository's format. |
 
 ## License
 
