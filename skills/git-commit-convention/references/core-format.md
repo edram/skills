@@ -6,7 +6,7 @@ description: Full commit message grammar — header, body, footer structure and 
 ## Usage
 
 ```
-<type>[optional scope]<!>: <description>
+<type>[optional scope][!]: <description>
 <BLANK LINE>
 [optional body]
 <BLANK LINE>

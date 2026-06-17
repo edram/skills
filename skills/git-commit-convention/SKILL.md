@@ -3,7 +3,7 @@ name: git-commit-convention
 description: Reference for writing structured git commit messages. Use when asked to write a commit, generate a commit message, review commit style, or work with conventional commits format.
 metadata:
   author: edram
-  version: 2026.06.15
+  version: 2026.06.17
   source: https://www.conventionalcommits.org/en/v1.0.0/
 ---
 
@@ -16,7 +16,7 @@ Conventional Commits 1.0.0 — a specification for writing commit messages that 
 - Default to English, but match the project's existing convention — check `git log` and follow whatever language recent commits use
 
 ```
-<type>[optional scope]<!>: <description>
+<type>[optional scope][!]: <description>
 
 [optional body]
 
