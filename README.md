@@ -14,6 +14,7 @@ npx skills@latest add edram/skills
 
 | Skill | Description |
 |-------|-------------|
+| [coding](./skills/coding/) | Constraints that keep AI-written code minimal, surgical, and well-commented. |
 | [git-commit-convention](./skills/git-commit-convention/) | Writing structured, conventional git commit messages. |
 | [skill-writer](./skills/skill-writer/) | Authoring and revising agent skills in this repository's format. |
 
