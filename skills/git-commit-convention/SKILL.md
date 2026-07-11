@@ -3,7 +3,7 @@ name: git-commit-convention
 description: Reference for writing structured git commit messages. Use when asked to write a commit, generate a commit message, review commit style, or work with conventional commits format.
 metadata:
   author: edram
-  version: 2026.06.17
+  version: 2026.07.11
   source: https://www.conventionalcommits.org/en/v1.0.0/
 ---
 
