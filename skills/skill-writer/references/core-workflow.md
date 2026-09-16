@@ -30,8 +30,9 @@ rewriting the SKILL.md.
 what an agent must *do* and wouldn't already know. Discard intros, install guides, and
 background an LLM is already confident about. Rewrite for action, don't copy prose.
 
-**Step 4 — Author.** Write the SKILL.md router first: frontmatter → overview → principle
-bullets → Core/Features tables. Then write each reference, **one concept per file**,
+**Step 4 — Author.** Use `doc-writer` to set the reader, voice, and evidence standard, then
+apply this skill's repository format. Write the SKILL.md router first: frontmatter → overview →
+principle bullets → Core/Features tables. Then write each reference, **one concept per file**,
 code-first under `## Usage`, gotchas under `## Key Points`, source comment at the bottom.
 
 **Step 5 — Review.** Run the [features-anti-patterns](features-anti-patterns.md) checklist,
@@ -41,6 +42,7 @@ sanity-check triggering per [features-evaluation](features-evaluation.md), and b
 ## Key Points
 
 - Router-first ordering prevents the common failure of stuffing everything into SKILL.md — you decide what's a reference *before* writing prose.
+- `doc-writer` improves the content; it does not override this skill's frontmatter, layout, naming, or progressive-disclosure rules.
 - For edits, change the narrowest file that fixes the problem and bump the version; avoid touching unrelated references.
 - Don't over-split. Prefer a few dense references over many thin ones (see [core-structure](core-structure.md)).
 

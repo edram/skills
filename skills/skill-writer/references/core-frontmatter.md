@@ -13,7 +13,7 @@ name: skill-writer
 description: Author and revise agent skills in this repository's format. Use when asked to create a new skill, scaffold a SKILL.md, add or edit reference files, or improve a skill's description.
 metadata:
   author: edram
-  version: 2026.06.17
+  version: 2026.09.16
   source: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices
 ---
 ```

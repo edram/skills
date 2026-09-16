@@ -3,7 +3,7 @@ name: skill-writer
 description: Author and revise agent skills in this repository's format. Use when asked to create a new skill, scaffold a SKILL.md, add or edit reference files, fix a skill's structure, or improve a skill's discovery/description.
 metadata:
   author: edram
-  version: 2026.06.17
+  version: 2026.09.16
   source: https://platform.claude.com/docs/en/agents-and-tools/agent-skills/best-practices
 ---
 
@@ -13,6 +13,7 @@ A skill is a progressive-disclosure document set the agent loads on demand. Only
 - **Only add what the model doesn't already know.** Every token competes with the conversation. Skip what an LLM is already confident about.
 - **`description` drives discovery.** Write it in third person, stating *what the skill does* and *when to use it*, with concrete trigger terms.
 - **Match this repo's house format**, not Anthropic's generic `# heading` layout. Model new skills on the existing `git-commit-convention` skill.
+- **Use `doc-writer` for the prose.** This skill owns skill structure, metadata, and progressive disclosure; `doc-writer` owns audience, voice, evidence, and Markdown presentation. This skill's house format wins if their guidance overlaps.
 - Skills live in `skills/{skill-name}/` — the `skills/` **subdirectory**, never the repo root (the repo itself is also named `skills`).
 
 > This skill is pure markdown — no scripts or tooling, matching repo convention.
