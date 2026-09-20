@@ -16,7 +16,7 @@ npx skills@latest add edram/skills
 |-------|-------------|
 | [coding](./skills/coding/) | Constraints that keep AI-written code minimal, surgical, and deliberately documented where intent or contracts matter. |
 | [doc-writer](./skills/doc-writer/) | Planning and writing audience-focused project prose across Markdown docs, skill instructions, pull requests, releases, and commits. |
-| [git-commit-convention](./skills/git-commit-convention/) | Writing structured, conventional git commit messages. |
+| [git-commit-convention](./skills/git-commit-convention/) | Planning coherent commit boundaries and writing structured, conventional git commit messages that match the staged changes. |
 | [skill-writer](./skills/skill-writer/) | Authoring and revising agent skills in this repository's format. |
 | [tdd](./skills/tdd/) | TDD discipline with preflight: decide whether TDD adds value, reuse existing test infrastructure, then red-green-refactor. |
 
